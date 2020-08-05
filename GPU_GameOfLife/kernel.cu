@@ -1,10 +1,4 @@
-
-#include "cuda_runtime.h"
-#include "device_launch_parameters.h"
-
-#include <stdio.h>
-
-cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size);
+#include "kernel.cuh"
 
 __global__ void addKernel(int *c, const int *a, const int *b)
 {
@@ -12,8 +6,26 @@ __global__ void addKernel(int *c, const int *a, const int *b)
     c[i] = a[i] + b[i];
 }
 
+__global__ void evolveKernel(unsigned int cells[MAX_GRID_X][MAX_GRID_Y], unsigned int newcells[MAX_GRID_X][MAX_GRID_Y])
+{
+    unsigned int y = blockIdx.y * blockDim.y + threadIdx.y;
+    unsigned int x = blockIdx.x * blockDim.x + threadIdx.x;
+    //if (x >= MAX_GRID_X || y >= MAX_GRID_Y)return;
+    /* whatever you wanna do with d_A[][] and d_B[][] */
+
+    int n = 0;
+    for (unsigned int y1 = y - 1; y1 <= y + 1; y1++)
+        for (unsigned int x1 = x - 1; x1 <= x + 1; x1++)
+            if (!cells[(x1 + MAX_GRID_X) % MAX_GRID_X][(y1 + MAX_GRID_Y) % MAX_GRID_Y])
+                n++;
+    if (!cells[x][y]) n--;
+    newcells[x][y] = (n == 3 || (n == 2 && !cells[x][y])) > 0 ? 0 : 255;
+}
+
+/*
 int main()
 {
+
     const int arraySize = 5;
     const int a[arraySize] = { 1, 2, 3, 4, 5 };
     const int b[arraySize] = { 10, 20, 30, 40, 50 };
@@ -39,6 +51,7 @@ int main()
 
     return 0;
 }
+*/
 
 // Helper function for using CUDA to add vectors in parallel.
 cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
@@ -118,4 +131,42 @@ Error:
     cudaFree(dev_b);
     
     return cudaStatus;
+}
+
+void evolveWithCuda(unsigned int cells[MAX_GRID_X][MAX_GRID_Y])
+{
+    cudaError_t cudaStatus;
+    unsigned int newcells[MAX_GRID_X][MAX_GRID_Y];
+
+    dim3 dimBlock(MAX_GRID_X, MAX_GRID_Y);
+    dim3 dimGrid(1, 1);
+
+    // Choose which GPU to run on, change this on a multi-GPU system.
+    cudaStatus = cudaSetDevice(0);
+    if (cudaStatus != cudaSuccess) {
+        fprintf(stderr, "cudaSetDevice failed!  Do you have a CUDA-capable GPU installed?");
+        goto Error;
+    }
+
+    // Launch a kernel on the GPU with one thread for each element.
+    evolveKernel<<<dimGrid, dimBlock >>>(cells, newcells);
+
+    // Check for any errors launching the kernel
+    cudaStatus = cudaGetLastError();
+    if (cudaStatus != cudaSuccess) {
+        fprintf(stderr, "addKernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
+        goto Error;
+    }
+
+    // cudaDeviceSynchronize waits for the kernel to finish, and returns
+    // any errors encountered during the launch.
+    cudaStatus = cudaDeviceSynchronize();
+    if (cudaStatus != cudaSuccess) {
+        fprintf(stderr, "cudaDeviceSynchronize returned error code %d after launching addKernel!\n", cudaStatus);
+        goto Error;
+    }
+
+Error:
+
+    //return cudaStatus;
 }

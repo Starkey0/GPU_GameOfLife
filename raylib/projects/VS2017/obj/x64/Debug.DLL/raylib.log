@@ -1,0 +1,2 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (O:\Projects\Coding\Sierpinski triangle\raylib\projects\VS2017\\obj\x64\Debug.DLL\) contains files shared from another project (core_basic_window.vcxproj, core_basic_window_cpp.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  raylib.vcxproj -> O:\Projects\Coding\Sierpinski triangle\raylib\projects\VS2017\\bin\x64\Debug.DLL\raylib.dll

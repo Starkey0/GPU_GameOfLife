@@ -1,2 +1,5 @@
 ﻿     Creating library O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.lib and object O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.exp
-  GPU_GameOfLife.vcxproj -> O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.exe
+Game.obj : error LNK2019: unresolved external symbol evolveWithCuda referenced in function main
+    Hint on symbols that are defined and could potentially match:
+      "void __cdecl evolveWithCuda(unsigned int (* const)[100])" (?evolveWithCuda@@YAXQEAY0GE@I@Z)
+O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.exe : fatal error LNK1120: 1 unresolved externals

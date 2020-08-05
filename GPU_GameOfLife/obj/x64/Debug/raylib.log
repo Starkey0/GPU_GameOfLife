@@ -1,0 +1,209 @@
+﻿  raudio.c
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(144,50): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(163,50): warning C4244: '=': conversion from 'float' to 'char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(1463,64): warning C4244: '=': conversion from 'uint16_t' to 'uint8_t', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(1476,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(1478,1): warning C4244: 'initializing': conversion from 'float' to 'int8_t', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(1749,47): warning C4244: '=': conversion from 'uint32_t' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(1784,70): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(2237,65): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(2372,90): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\jar_xm.h(2569,48): warning C4244: '+=': conversion from 'float' to 'uint64_t', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\raudio.c(2019,58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  core.c
+O:\Projects\Coding\GPU Game of Life\raylib\src\rlgl.h(1646,5): warning C4090: 'function': different 'const' qualifiers
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1653,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1716,35): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1717,35): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1718,35): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1719,35): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1790,30): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1793,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1798,30): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1801,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1806,30): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1785,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(1983,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(2040,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(2842,32): warning C4018: '>=': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\core.c(2844,37): warning C4018: '>=': signed/unsigned mismatch
+  models.c
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(273,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(305,54): warning C4305: 'function': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(335,43): warning C4305: 'function': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(346,43): warning C4305: 'function': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(534,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(535,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(543,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(544,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(568,28): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(559,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(560,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(576,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(586,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(587,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(609,78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(611,78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(612,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(618,56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(619,56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(620,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(601,1): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(602,1): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(603,1): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(604,1): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(605,1): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(606,1): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(670,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(671,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(695,45): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(669,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(805,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(853,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(953,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1284,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1286,65): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1288,65): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1290,65): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1447,38): warning C4305: 'function': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1464,27): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1465,23): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1466,27): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1468,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1748,43): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1748,59): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1748,75): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\external\par_shapes.h(1717,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(144,35): warning C4305: 'function': truncation from 'double' to 'float'
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(864,23): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(999,23): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(1007,27): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(1013,27): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(1017,35): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(1019,31): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(1106,35): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2459,73): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2460,73): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2461,73): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2462,73): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2898,31): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2935,27): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2846,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2849,9): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _chdir. See online help for details.
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2971,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2975,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2982,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(2993,9): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _chdir. See online help for details.
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3176,49): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3191,23): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3201,35): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3204,61): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3218,35): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3221,61): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3235,35): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3238,61): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3251,35): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3254,61): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3267,35): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3270,61): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3289,23): warning C4018: '<': signed/unsigned mismatch
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3466,82): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3456,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3457,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3557,56): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3642,78): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3645,25): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3652,25): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3661,29): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3677,82): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3679,25): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\models.c(3696,114): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  rglfw.c
+  shapes.c
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(222,62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(228,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(316,62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(322,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(368,31): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(368,40): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(410,31): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(410,40): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(464,62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(477,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(560,62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(572,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(773,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\shapes.c(997,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  text.c
+O:\Projects\Coding\GPU Game of Life\raylib\src\text.c(948,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\text.c(1216,44): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\text.c(1333,43): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  textures.c
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(707,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1296,63): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1305,106): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1308,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1308,59): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1309,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1309,61): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1310,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1311,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1311,61): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1312,56): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1313,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1313,61): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1317,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1317,61): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1318,56): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1319,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1320,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1320,61): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1321,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1321,59): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1322,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1322,61): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1291,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1332,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1414,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1543,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1544,40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1550,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1551,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1497,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1502,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1508,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1513,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1958,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1931,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1964,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1965,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1992,1): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1998,39): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1998,51): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1998,59): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(1998,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2015,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2015,41): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2015,52): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2016,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2016,49): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2016,78): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2017,54): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2017,69): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2017,98): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2018,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2018,62): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2018,73): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2247,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2248,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2249,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(2250,1): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(3524,72): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(3534,78): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\textures.c(3535,97): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  utils.c
+O:\Projects\Coding\GPU Game of Life\raylib\src\utils.c(190,1): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\utils.c(216,1): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+O:\Projects\Coding\GPU Game of Life\raylib\src\utils.c(251,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  raylib.vcxproj -> O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\\bin\x64\Debug\raylib.lib
