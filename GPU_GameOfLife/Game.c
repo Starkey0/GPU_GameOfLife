@@ -12,8 +12,11 @@
 ********************************************************************************************/
 #include "raylib.h"
 #include <string.h>
-#include "kernel.cuh"
+#include "kernel.h"
 
+cudaError_t evolveWithCuda(unsigned int cells[MAX_GRID_X*MAX_GRID_Y]);
+
+cudaError_t addWithCuda(int* c, const int* a, const int* b, unsigned int size);
 
 void evolve(unsigned int cells[MAX_GRID_X][MAX_GRID_Y])
 {
@@ -37,7 +40,6 @@ void evolve(unsigned int cells[MAX_GRID_X][MAX_GRID_Y])
 }
 
 
-
 int main(void)
 {
     // Initialization
@@ -45,15 +47,20 @@ int main(void)
     InitWindow(SCREENWIDTH, SCREENHEIGHT, "Game of Life");
 
     Rectangle player = { SCREENWIDTH / 2, SCREENHEIGHT / 2, 0, 0 };
-    unsigned int cells[MAX_GRID_X][MAX_GRID_Y];
+    unsigned int cells[MAX_GRID_X*MAX_GRID_Y];
 
-    for_xy cells[x][y] = rand() % 100 < 50 ? 0 : 255;
+    for_xy cells[x+y] = rand() % 100 < 50 ? 0 : 255;
 
     Camera2D camera = { 0 };
     camera.target = (Vector2){ player.x + CELL_SIZE / 2, player.y + CELL_SIZE / 2 };
     camera.offset = (Vector2){ SCREENWIDTH / 2, SCREENHEIGHT / 2 };
     camera.rotation = 0.0f;
     camera.zoom = 0.9f;
+
+    const int a[5] = { 1, 2, 3, 4, 5 };
+    const int b[5] = { 10, 20, 30, 40, 50 };
+    int c[5] = { 0 };
+
 
     SetTargetFPS(10);                   // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
@@ -96,6 +103,9 @@ int main(void)
         }
 
         evolveWithCuda(cells);
+        //addWithCuda(c, a, b, 5);
+        //printf("{1,2,3,4,5} + {10,20,30,40,50} = {%d,%d,%d,%d,%d}\n",
+        //    c[0], c[1], c[2], c[3], c[4]);
 
         //----------------------------------------------------------------------------------
 
@@ -107,7 +117,7 @@ int main(void)
 
         BeginMode2D(camera);
 
-        for_xy DrawRectangleRec((Rectangle) { x << CELL_POW, y << CELL_POW, CELL_SIZE, CELL_SIZE }, (Color) { cells[x][y], cells[x][y], cells[x][y], 255 });
+        for_xy DrawRectangleRec((Rectangle) { x << CELL_POW, y << CELL_POW, CELL_SIZE, CELL_SIZE }, (Color) { cells[x+y], cells[x+y], cells[x+y], 255 });
 
 
         EndMode2D();

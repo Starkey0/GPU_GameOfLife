@@ -1,4 +1,4 @@
-#include "kernel.cuh"
+#include "kernel.h"
 
 __global__ void addKernel(int *c, const int *a, const int *b)
 {
@@ -6,12 +6,21 @@ __global__ void addKernel(int *c, const int *a, const int *b)
     c[i] = a[i] + b[i];
 }
 
-__global__ void evolveKernel(unsigned int cells[MAX_GRID_X][MAX_GRID_Y], unsigned int newcells[MAX_GRID_X][MAX_GRID_Y])
+__global__ void evolveKernel(unsigned int cells[MAX_GRID_X*MAX_GRID_Y], unsigned int newcells[MAX_GRID_X*MAX_GRID_Y])
 {
-    unsigned int y = blockIdx.y * blockDim.y + threadIdx.y;
-    unsigned int x = blockIdx.x * blockDim.x + threadIdx.x;
+    unsigned int tid = blockDim.x * blockIdx.x + threadIdx.x;
+    unsigned int x,y;
+
+    if (tid % PDIM < MAX_GRID_X)
+    {
+        y = blockIdx.x / DIV;
+        x = blockIdx.x % PDIM;
+        printf("%d, %d, %d \n", tid, x, y);
+    }
+
+
     //if (x >= MAX_GRID_X || y >= MAX_GRID_Y)return;
-    /* whatever you wanna do with d_A[][] and d_B[][] */
+    /* whatever you wanna do with d_A[][] and d_B[][] 
 
     int n = 0;
     for (unsigned int y1 = y - 1; y1 <= y + 1; y1++)
@@ -20,6 +29,8 @@ __global__ void evolveKernel(unsigned int cells[MAX_GRID_X][MAX_GRID_Y], unsigne
                 n++;
     if (!cells[x][y]) n--;
     newcells[x][y] = (n == 3 || (n == 2 && !cells[x][y])) > 0 ? 0 : 255;
+
+    */
 }
 
 /*
@@ -54,7 +65,7 @@ int main()
 */
 
 // Helper function for using CUDA to add vectors in parallel.
-cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
+extern "C" cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
 {
     int *dev_a = 0;
     int *dev_b = 0;
@@ -133,14 +144,12 @@ Error:
     return cudaStatus;
 }
 
-void evolveWithCuda(unsigned int cells[MAX_GRID_X][MAX_GRID_Y])
+extern "C" cudaError_t evolveWithCuda(unsigned int h_cells[MAX_GRID_X*MAX_GRID_Y])
 {
     cudaError_t cudaStatus;
-    unsigned int newcells[MAX_GRID_X][MAX_GRID_Y];
-
-    dim3 dimBlock(MAX_GRID_X, MAX_GRID_Y);
-    dim3 dimGrid(1, 1);
-
+    unsigned int *dA, *dB;
+    size_t pitch;
+    
     // Choose which GPU to run on, change this on a multi-GPU system.
     cudaStatus = cudaSetDevice(0);
     if (cudaStatus != cudaSuccess) {
@@ -148,13 +157,22 @@ void evolveWithCuda(unsigned int cells[MAX_GRID_X][MAX_GRID_Y])
         goto Error;
     }
 
+    //cudaMallocPitch(&dA, &pitch, sizeof(unsigned int) * MAX_GRID_X, MAX_GRID_Y);
+    cudaMalloc(&dA, sizeof(unsigned int) * MAX_GRID_X * MAX_GRID_Y);
+    cudaMalloc(&dB, sizeof(unsigned int) * MAX_GRID_X * MAX_GRID_Y);
+
+    cudaMemcpy(dA, h_cells, sizeof(unsigned int) * MAX_GRID_X * MAX_GRID_Y, cudaMemcpyHostToDevice);
+
+    int threadsperblock = TPB;
+    int blockspergrid = PDIM * PDIM / threadsperblock;
+
     // Launch a kernel on the GPU with one thread for each element.
-    evolveKernel<<<dimGrid, dimBlock >>>(cells, newcells);
+    evolveKernel<<<blockspergrid, threadsperblock >>>(dA, dB);
 
     // Check for any errors launching the kernel
     cudaStatus = cudaGetLastError();
     if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "addKernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
+        fprintf(stderr, "evolveKernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
         goto Error;
     }
 
@@ -166,7 +184,12 @@ void evolveWithCuda(unsigned int cells[MAX_GRID_X][MAX_GRID_Y])
         goto Error;
     }
 
+    cudaMemcpy(h_cells, dB, sizeof(unsigned int) * MAX_GRID_X * MAX_GRID_Y, cudaMemcpyDeviceToHost);
+
+    cudaFree(dA);
+    cudaFree(dB);
+
 Error:
 
-    //return cudaStatus;
+    return cudaStatus;
 }

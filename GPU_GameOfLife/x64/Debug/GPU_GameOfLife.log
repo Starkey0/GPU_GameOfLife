@@ -1,5 +1,20 @@
-﻿     Creating library O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.lib and object O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.exp
-Game.obj : error LNK2019: unresolved external symbol evolveWithCuda referenced in function main
-    Hint on symbols that are defined and could potentially match:
-      "void __cdecl evolveWithCuda(unsigned int (* const)[100])" (?evolveWithCuda@@YAXQEAY0GE@I@Z)
-O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.exe : fatal error LNK1120: 1 unresolved externals
+﻿  Compiling CUDA source file kernel.cu...
+  
+  O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\bin\HostX86\x64" -x cu  -I"O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\..\raylib\src" -I"O:\Projects\Coding\Game of Life\raylib\src" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc142.pdb /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\kernel.cu" 
+O:/Projects/Coding/GPU Game of Life/GPU_GameOfLife/kernel.cu(157): warning : transfer of control bypasses initialization of:
+              variable "threadsperblock"
+  (166): here
+              variable "blockspergrid"
+  (167): here
+  
+O:/Projects/Coding/GPU Game of Life/GPU_GameOfLife/kernel.cu(151): warning : variable "pitch" was declared but never referenced
+  
+O:/Projects/Coding/GPU Game of Life/GPU_GameOfLife/kernel.cu(157): warning : transfer of control bypasses initialization of:
+              variable "threadsperblock"
+  (166): here
+              variable "blockspergrid"
+  (167): here
+  
+  kernel.cu
+O:/Projects/Coding/GPU Game of Life/GPU_GameOfLife/kernel.cu(151): warning C4101: 'pitch': unreferenced local variable
+  GPU_GameOfLife.vcxproj -> O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\x64\Debug\GPU_GameOfLife.exe

@@ -75,4 +75,4 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\vector_function
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\vector_functions.hpp
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\vector_types.h
 O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\kernel.cu
-O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\kernel.cuh
+O:\Projects\Coding\GPU Game of Life\GPU_GameOfLife\kernel.h
