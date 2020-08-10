@@ -11,58 +11,27 @@ __global__ void evolveKernel(unsigned int cells[MAX_GRID_X*MAX_GRID_Y], unsigned
     unsigned int tid = blockDim.x * blockIdx.x + threadIdx.x;
     unsigned int x,y;
 
-    if (tid % PDIM < MAX_GRID_X)
-    {
-        y = blockIdx.x / DIV;
-        x = blockIdx.x % PDIM;
-        printf("%d, %d, %d \n", tid, x, y);
-    }
+    y = tid / MAX_GRID_X;
+    x = tid - y* MAX_GRID_X;
+    //printf("%d, %d, %d \n", tid, x, y);
+    //newcells[x + y * MAX_GRID_X] = cells[x + y * MAX_GRID_X];
 
 
-    //if (x >= MAX_GRID_X || y >= MAX_GRID_Y)return;
-    /* whatever you wanna do with d_A[][] and d_B[][] 
-
+    if (x >= MAX_GRID_X || y >= MAX_GRID_Y)return;
     int n = 0;
     for (unsigned int y1 = y - 1; y1 <= y + 1; y1++)
         for (unsigned int x1 = x - 1; x1 <= x + 1; x1++)
-            if (!cells[(x1 + MAX_GRID_X) % MAX_GRID_X][(y1 + MAX_GRID_Y) % MAX_GRID_Y])
+            //if (!cells[(x1 + MAX_GRID_X) % MAX_GRID_X][(y1 + MAX_GRID_Y) % MAX_GRID_Y])
+                //n++;
+            if (!cells[(((x1 + MAX_GRID_X) % MAX_GRID_X) + ((y1 + MAX_GRID_Y) % MAX_GRID_Y) * MAX_GRID_X)])
                 n++;
-    if (!cells[x][y]) n--;
-    newcells[x][y] = (n == 3 || (n == 2 && !cells[x][y])) > 0 ? 0 : 255;
 
-    */
+    if (!cells[x + y * MAX_GRID_X]) n--;
+    newcells[x + y * MAX_GRID_X] = (n == 3 || (n == 2 && !cells[x + y * MAX_GRID_X])) > 0 ? 0 : 255;
+
+    
 }
 
-/*
-int main()
-{
-
-    const int arraySize = 5;
-    const int a[arraySize] = { 1, 2, 3, 4, 5 };
-    const int b[arraySize] = { 10, 20, 30, 40, 50 };
-    int c[arraySize] = { 0 };
-
-    // Add vectors in parallel.
-    cudaError_t cudaStatus = addWithCuda(c, a, b, arraySize);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "addWithCuda failed!");
-        return 1;
-    }
-
-    printf("{1,2,3,4,5} + {10,20,30,40,50} = {%d,%d,%d,%d,%d}\n",
-        c[0], c[1], c[2], c[3], c[4]);
-
-    // cudaDeviceReset must be called before exiting in order for profiling and
-    // tracing tools such as Nsight and Visual Profiler to show complete traces.
-    cudaStatus = cudaDeviceReset();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaDeviceReset failed!");
-        return 1;
-    }
-
-    return 0;
-}
-*/
 
 // Helper function for using CUDA to add vectors in parallel.
 extern "C" cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
@@ -164,7 +133,7 @@ extern "C" cudaError_t evolveWithCuda(unsigned int h_cells[MAX_GRID_X*MAX_GRID_Y
     cudaMemcpy(dA, h_cells, sizeof(unsigned int) * MAX_GRID_X * MAX_GRID_Y, cudaMemcpyHostToDevice);
 
     int threadsperblock = TPB;
-    int blockspergrid = PDIM * PDIM / threadsperblock;
+    int blockspergrid = MAX_GRID_X * MAX_GRID_Y / threadsperblock;
 
     // Launch a kernel on the GPU with one thread for each element.
     evolveKernel<<<blockspergrid, threadsperblock >>>(dA, dB);
